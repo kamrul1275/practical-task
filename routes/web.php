@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
@@ -41,6 +41,9 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 
+Route::get('/',[UserController::class,'Index']);
+Route::get('/search',[UserController::class,'SearchResult'])->name('search');
+// Route::get('/search',[UserController::class,'SearchResult']);
 
 
 // Admin Authentication
