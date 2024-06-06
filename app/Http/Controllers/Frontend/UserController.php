@@ -20,15 +20,11 @@ class UserController extends Controller
     public function SearchResult(Request $request)
     {
         $query = $request->input('query');
-        $companies = Company::where('company_name', 'LIKE', "%{$query}%")->get();
+        $companies = Company::where('company_name', 'LIKE', "%{$query}%")->paginate(5);
 
-        // dd($companies);
         return view('frontend.search', compact('companies'));
     }
 
     
-    
-    // function SearchResult(){
-    //     return view('frontend.search');
-    // }
+
 }

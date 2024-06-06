@@ -23,25 +23,18 @@
 <div class="container">
     <div class="row">
         <div class="logo_img">
-          <img src="{{asset('frontend/img/logo.jpg')}}" alt="logo">
+         <a href="{{route('index')}}"> <img src="{{asset('frontend/img/logo.jpg')}}" alt="logo"></a>
         </div>
     </div>
 </div>
 
 
-<!-- <div class="wrap">
-    <div class="search">
-       <input type="text" class="searchTerm" placeholder="Search Company">
-       <button type="submit" class="searchButton">
-         <i class="fa fa-search"></i>
-      </button>
-    </div>
-  </div> -->
+
 
   <div class="wrap">
   <div class="search">
   <form action="{{ route('search') }}" method="GET">
-        <input type="text" name="query" placeholder="Search Company?" required>
+        <input type="text" name="query" placeholder="Search Company" required>
         <button type="submit"><i class="fa fa-search"></i></button>
     </form>
   </div>

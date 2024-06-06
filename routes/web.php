@@ -16,13 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('User')->group(function(){
 
@@ -41,17 +35,11 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 
-Route::get('/',[UserController::class,'Index']);
+Route::get('/',[UserController::class,'Index'])->name('index');
 Route::get('/search',[UserController::class,'SearchResult'])->name('search');
-// Route::get('/search',[UserController::class,'SearchResult']);
-
 
 // Admin Authentication
-
-
-
 Route::get('/admin/login',[AdminController::class,'AdminLoginForm']); 
-//Route::post('/admin/login',[AdminController::class,'AdminLogin']); 
 
 
 

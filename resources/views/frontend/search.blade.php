@@ -13,40 +13,27 @@
     <title>Hello, world!</title>
   </head>
   <body>
-  
-   
 
 
-<!--       
-      <style>
-
-     body{
-        margin: 0px;
-        padding: 0px;;
-        background: #f2f2f2;
-        font-family: 'Open Sans', sans-serif;
-        background-color: white;
-      }
-
-
-
-      </style> -->
 
 
 <div class="container">
     <div class="row">
         <div class="logo_imgSearch">
-                <img src="{{asset('frontend/img/logo.jpg')}}" alt="logo">
+             <a href="{{route('index')}}"><img src="{{asset('frontend/img/logo.jpg')}}" alt="logo"></a>
         </div>
 
-        <div class="wrapSearch">
-          <div class="searchSearch">
-             <input type="text" class="searchTermSearch" placeholder="Search Company">
-             <button type="submit" class="searchButtonSearch">
-               <i class="fa fa-search"></i>
-            </button>
-          </div>
-        </div>
+
+<div class="wrapSearch">
+  <div class="searchSearch">
+  <form action="{{ route('search') }}" method="GET">
+        <input type="text" name="query" placeholder="Search Company" required>
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+<!--  -->
     </div>
 </div>
 
@@ -55,34 +42,38 @@
 
 <div class="container">
   <div class="row">
+  <table class="table table-hover">
+    <tbody>
+        @if ($companies->isNotEmpty())
+            @foreach ($companies as $company)
+                <tr>
+                    <td>{{ $company->company_name }}</td>
+                    <td>
+                        <a href="{{ $company->company_website }}">
+                            <img src="{{ asset('frontend/img/domain.png') }}" alt="">
+                        </a>
+                        <a href="tel:{{ $company->company_phone }}">
+                            <img src="{{ asset('frontend/img/phone.png') }}" alt="">
+                        </a>
+                        <a href="mailto:{{ $company->company_mail }}">
+                            <img src="{{ asset('frontend/img/mail.png') }}" alt="">
+                        </a>
+                    </td>
+                </tr>
+            @endforeach
+        @else
+            <tr>
+                <td colspan="2"> <span class="text-danger">Nothing found</span> </td>
+            </tr>
+        @endif
+    </tbody>
+</table>
+{{ $companies->links() }}
 
-    <table class="table table-hover">
-    
-      <tbody>
-
-      @foreach ($companies as $company)
-        
-     
-        <tr>
-          <td>{{$company->company_name}}</td>
-        
-          <td>
-            
-            <a href="{{$company->company_website}}"> <img src="{{asset('frontend/img/domain.png')}}" alt=""> </a>
-            <a href="{{$company->company_phone}}"><img src="{{asset('frontend/img/phone.png')}}" alt=""> </a>
-
-            <a href="{{$company->company_mail}} "><img src="{{asset('frontend/img/mail.png')}}" alt=""></a>
-
-          </td>
-        </tr>
-      
-        @endforeach
-      </tbody>
-    </table>
   </div>
 </div>
 
-  
+
 
 
 
