@@ -21,51 +21,23 @@
 				</li>
 
 
-				
-
-				
-
 
                 <li>
 					<a href="javascript:;" class="has-arrow">
 						<div class="parent-icon"><i class="bx bx-category"></i>
 						</div>
-						<div class="menu-title">SubCategory</div>
+						<div class="menu-title">Company</div>
 					</a>
 					<ul>
-						<li> <a href=""><i class="bx bx-right-arrow-alt"></i>add Company_Name</a>
+						<li> <a href="{{route('add.company')}}"><i class="bx bx-right-arrow-alt"></i>add Company_Name</a>
 						</li>
-						<li> <a href=""><i class="bx bx-right-arrow-alt"></i>all Company_Name</a>
+						<li> <a href="{{route('all.company')}}"><i class="bx bx-right-arrow-alt"></i>all Company_Name</a>
 						</li>
 					</ul>
 				</li>
 
-				<li class="menu-label">UI Elements</li>
-				<li>
-					<a href="widgets.html">
-						<div class="parent-icon"><i class='bx bx-cookie'></i>
-						</div>
-						<div class="menu-title">Widgets</div>
-					</a>
-				</li>
+	
 			
-				
-				<li class="menu-label">Charts & Maps</li>
-				<li>
-					<a class="has-arrow" href="javascript:;">
-						<div class="parent-icon"><i class="bx bx-line-chart"></i>
-						</div>
-						<div class="menu-title">Charts</div>
-					</a>
-					<ul>
-						<li> <a href="charts-apex-chart.html"><i class="bx bx-right-arrow-alt"></i>Apex</a>
-						</li>
-						<li> <a href="charts-chartjs.html"><i class="bx bx-right-arrow-alt"></i>Chartjs</a>
-						</li>
-						<li> <a href="charts-highcharts.html"><i class="bx bx-right-arrow-alt"></i>Highcharts</a>
-						</li>
-					</ul>
-				</li>
 				<li>
 					<a class="has-arrow" href="javascript:;">
 						<div class="parent-icon"><i class="bx bx-map-alt"></i>

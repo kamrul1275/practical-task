@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\AdminController;
+use App\Http\Controllers\Backend\CompanyController;
 use App\Http\Controllers\Frontend\UserController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -55,7 +56,15 @@ Route::middleware(['Admin'])->group(function () {
     Route::get('/admin/profile',[AdminController::class,'AdminProfile'])->name('admin.profile');
     Route::post('/admin/profile',[AdminController::class,'AdminProfileStore'])->name('admin.profile.store');
 
+// Company Part
 
 
 });
 
+Route::get('/add/campnay',[CompanyController::class,'addCompany'])->name('add.company');
+Route::get('/all/campnay',[CompanyController::class,'allCompany'])->name('all.company');
+Route::post('/store/campnay',[CompanyController::class,'storeCompany'])->name('store.company');
+Route::get('/edit/company/{id}',[CompanyController::class,'editCompany'])->name('edit.company');
+
+Route::get('/delete/company/{id}',[CompanyController::class,'deleteCompany'])->name('delete.company');
+// Route::get('/delete/campnay/{id}',[CompanyController::class,'deleteCompany'])->name('delete.company');
