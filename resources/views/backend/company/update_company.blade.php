@@ -52,7 +52,7 @@
 
 					<div class="row mb-3">
                         <div class="col-sm-3">
-                            <h6 class="mb-0">Website Name</h6>
+                            <h6 class="mb-0">Website Link</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
                             <input type="text" name="company_website" class="form-control" />

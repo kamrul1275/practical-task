@@ -60,50 +60,7 @@ class AdminController extends Controller
 
 
 
-  // function AdminProfileStore(Request $request){
-  //   $id = Auth::user()->id;
-  //   $userProfile = User::findOrFail($id);
-  //   $userProfile->name = $request->name;
-  //   // $userProfile->user_name = $request->user_name;
-  //   $userProfile->email = $request->email;
-  //   $userProfile->phone = $request->phone;
-  //   $userProfile->address = $request->address;
 
-
-
-
-
-
-  //     // Handle the image upload
-  //     if ($request->hasFile('image')) {
-  //       $image = $request->file('image');
-  //       $filename = time() . '.' . $image->getClientOriginalExtension();
-
-  //       // Resize the image
-  //       $resizedImage = Image::make($image)->resize(300, 300, function ($constraint) {
-  //           $constraint->aspectRatio();
-  //       });
-
-  //       // Save the image
-  //       $path = public_path('images/' . $filename);
-  //       $resizedImage->save($path);
-
-  //       // Optionally, save the image information in the database
-
-  //       return back()->with('success', 'Image uploaded and resized successfully.');
-  //   }
-
-
-  //   $userProfile->save();
-  //   return back()->with('error', 'Image upload failed.');
-
-
-
-   
-
-  //  // return redirect()->back();
-  //   //dd($userProfile);
-  // }
   function AdminProfileStore(Request $request)
 {
     $id = Auth::user()->id;

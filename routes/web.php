@@ -64,6 +64,7 @@ Route::middleware(['Admin'])->group(function () {
 Route::get('/add/campnay',[CompanyController::class,'addCompany'])->name('add.company');
 Route::get('/all/campnay',[CompanyController::class,'allCompany'])->name('all.company');
 Route::post('/store/campnay',[CompanyController::class,'storeCompany'])->name('store.company');
+
 Route::get('/edit/company/{id}',[CompanyController::class,'editCompany'])->name('edit.company');
 
 Route::get('/delete/company/{id}',[CompanyController::class,'deleteCompany'])->name('delete.company');

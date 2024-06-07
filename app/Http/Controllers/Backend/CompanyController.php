@@ -8,15 +8,18 @@ use Illuminate\Http\Request;
 
 class CompanyController extends Controller
 {
+    
     function allCompany(){
 
         $companies = Company::get();
         return view('backend.company.all_company',compact('companies'));
     }//end method
 
+
     function addCompany(){
         return view('backend.company.add_company');
     }//end method
+
 
     function storeCompany(Request $request){
         
@@ -31,7 +34,7 @@ class CompanyController extends Controller
             // Custom error messages
             'company_name.required' => 'name is required.',
             'company_mail.required' => 'email is required.',
-            'company_mail.unique' => 'Comapny name must be unique.',
+            'company_mail.unique' => 'Comapny Mail must be unique.',
             'company_website.required' => ' Comapny name is required.',
             'company_phone.required' => 'Comapny name is required.',
 
@@ -58,11 +61,13 @@ class CompanyController extends Controller
 
         function editCompany($id){
             $companies =Company::find($id);
-           // return  $companies;
+        
+            return view('backend.company.edit_company',compact('companies'));
 
-            return view('backend.company.edit_company');
+        }//end method
 
-        }
+
+
 
 function deleteCompany($id){
     $BrandDelete = Company::findOrfail($id);
@@ -70,7 +75,7 @@ function deleteCompany($id){
 
     return redirect()->back();
 
-}
+}//end method
 
 
    

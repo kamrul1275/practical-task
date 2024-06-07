@@ -359,8 +359,8 @@ class ComposerStaticInitf89f1bd1ea10ca48e9bbc2d9d7a9d784
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -562,8 +562,7 @@ class ComposerStaticInitf89f1bd1ea10ca48e9bbc2d9d7a9d784
         'App\\Http\\Controllers\\Auth\\RegisteredUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisteredUserController.php',
         'App\\Http\\Controllers\\Auth\\VerifyEmailController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerifyEmailController.php',
         'App\\Http\\Controllers\\Backend\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/AdminController.php',
-        'App\\Http\\Controllers\\Backend\\BrandController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/BrandController.php',
-        'App\\Http\\Controllers\\Backend\\CategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/CategoryController.php',
+        'App\\Http\\Controllers\\Backend\\CompanyController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/CompanyController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\Frontend\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Frontend/UserController.php',
         'App\\Http\\Controllers\\ProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProfileController.php',
@@ -581,9 +580,7 @@ class ComposerStaticInitf89f1bd1ea10ca48e9bbc2d9d7a9d784
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Requests\\Auth\\LoginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Auth/LoginRequest.php',
         'App\\Http\\Requests\\ProfileUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ProfileUpdateRequest.php',
-        'App\\Models\\Brand' => __DIR__ . '/../..' . '/app/Models/Brand.php',
-        'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
-        'App\\Models\\SubCategory' => __DIR__ . '/../..' . '/app/Models/SubCategory.php',
+        'App\\Models\\Company' => __DIR__ . '/../..' . '/app/Models/Company.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
